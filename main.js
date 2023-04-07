@@ -1,8 +1,5 @@
 // --------- PROGRAMMA --------------
 
-//Inizializziamo una variabile per il prezzo
-let price = 0;
-console.log(price);
 //Inizializiamo una variabile per il numero di ore
 let howManyHours = 0;
 
@@ -14,6 +11,10 @@ console.log(couponCodes);
 // ---------- FUNZIONI ---------------
 function calculateWorkPrice(event){
     event.preventDefault();
+
+    //Inizializziamo una variabile per il prezzo
+    let price = 0;
+    console.log(price);
 
     //Stabiliamo un prezzo base per il tipo di lavoro
     let selectedTypeOfWork = document.getElementById("type of work").value;
@@ -63,6 +64,9 @@ function calculateWorkPrice(event){
     
     console.log(price);
 
+
+    //Facciamo visualizzare il prezzo all'utente
+    document.getElementById("price").innerHTML = price.toFixed(2);
 
 }
 
