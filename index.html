@@ -22,8 +22,7 @@
         <a class="navbar-brand text-primary me-5" href="#">CONTACT ME</a>
 
       </div>
-      </div>
-      </div>
+      
     </nav>
   </header>
 
@@ -121,37 +120,37 @@
     </div>
 
     <div class="bg-info">
-      <div class="container">
+      <div class="container d-flex justify-content-evenly">
         <!--TERZA RIGA FORMS-->
 
-        <div class="row align-items-center">
+        <div class="row">
           <h2 class="text-center pt-3">WANT AN OFFER?</h2>
 
           <!-- TODO: PROGETTARE IL FORM QUI -->
           <form onsubmit="calculateWorkPrice(event)">
-            <div class="col-6">
+            <div class="col">
               <div class="mb-3 ">
 
-                <label for="exampleFormControlInput1" class="form-label">First name</label>
-                <input class="form-control" id="exampleFormControlInput1" placeholder="Enter your first name...">
+                <label class="form-label">First name</label>
+                <input class="form-control" placeholder="Enter your first name...">
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col">
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Last name</label>
-                <input class="form-control" id="exampleFormControlInput1" placeholder="Enter your last name...">
+                <label class="form-label">Last name</label>
+                <input class="form-control" placeholder="Enter your last name...">
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col">
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control" placeholder="name@example.com">
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col">
               <div class="mb-3">
                 <label for="hoursOfWork" class="form-label">Hours requested</label>
                 <input type="text" class="form-control" id="hoursOfWork" placeholder="Enter hours requested...">
@@ -159,10 +158,10 @@
               </div>
             </div>
 
-            <div class="col-6 mb-2">
+            <div class="col mb-2">
               <div class="mb-3">
                 <p>Type of work</p>
-                <select class="form-select" aria-label="Default select example" name="type of work" id="type of work">
+                <select class="form-select" aria-label="Default select example" name="type of work" id="typeOfWork">
                   <option selected>Select type of work</option>
                   <option value="Backend">Backend (20.50€/h)</option>
                   <option value="Frontend">Frontend (15.30€/h)</option>
@@ -172,7 +171,7 @@
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col">
               <div class="mb-3">
                 <label for="coupon"  class="form-label">Discount Coupon</label>
                 <input type="text" class="form-control" id="coupon" placeholder="ABCDE12">

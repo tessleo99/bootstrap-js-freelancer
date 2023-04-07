@@ -17,7 +17,7 @@ function calculateWorkPrice(event){
     console.log(price);
 
     //Stabiliamo un prezzo base per il tipo di lavoro
-    let selectedTypeOfWork = document.getElementById("type of work").value;
+    let selectedTypeOfWork = document.getElementById("typeOfWork").value;
     console.log(selectedTypeOfWork);
 
     switch(selectedTypeOfWork){
