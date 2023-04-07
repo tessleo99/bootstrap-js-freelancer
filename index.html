@@ -121,7 +121,7 @@
     </div>
 
     <div class="bg-info">
-      <div class="container-fluid">
+      <div class="container">
         <!--TERZA RIGA FORMS-->
 
         <div class="row align-items-center">
@@ -153,8 +153,8 @@
 
             <div class="col-6">
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Hours requested</label>
-                <input class="form-control" id="exampleFormControlInput1" placeholder="Enter your last name...">
+                <label for="hoursOfWork" class="form-label">Hours requested</label>
+                <input type="text" class="form-control" id="hoursOfWork" placeholder="Enter hours requested...">
               </div>
             </div>
 
@@ -163,9 +163,9 @@
                 <p>Type of work</p>
                 <select class="form-select" aria-label="Default select example" name="type of work" id="type of work">
                   <option selected>Select type of work</option>
-                  <option>Backend (20.50€/h)</option>
-                  <option>Frontend (15.30€/h)</option>
-                  <option>Analysis of a project (33.60€)</option>
+                  <option value="Backend">Backend (20.50€/h)</option>
+                  <option value="Frontend">Frontend (15.30€/h)</option>
+                  <option value="Analysis-of-a-project">Analysis of a project (33.60€)</option>
               
                 </select>
               </div>
@@ -173,8 +173,9 @@
 
             <div class="col-6">
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Discount Code</label>
-                <input class="form-control" id="exampleFormControlInput1">
+                <label for="coupon" class="form-label">Discount Coupon</label>
+                <input type="text" class="form-control" id="coupon" placeholder="ABCDE12">
+                <p id="result-applied-cupon"></p>
               </div>
             </div>
 
