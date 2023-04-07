@@ -37,6 +37,11 @@ function calculateWorkPrice(event){
     
     //Prendiamoci quante ore di lavoro richiede il cliente
     let howManyHours = document.getElementById("hoursOfWork").value;
+    if(isNaN (howManyHours) || howManyHours == ""){
+        document.getElementById("hourValidate").innerHTML= "Inserisci un numero!";
+        document.getElementById("hourValidate").classList.add("text-danger");
+        document.getElementById("hoursOfWork").classList.add("text-danger");
+       } 
     howManyHours = parseInt (howManyHours);
     //Stabiliamo il prezzo in base al numero di ore
     price = price * howManyHours;
@@ -46,20 +51,22 @@ function calculateWorkPrice(event){
    
    
     //Calcoliamo l'eventuale sconto con i cupon
-    let cuponCodeUser = document.getElementById("coupon").value;
+    let couponCodeUser = document.getElementById("coupon").value;
     //controlliamo se il cupon inserito esiste
-    let isCuponAvaliable = couponCodes.includes(cuponCodeUser);
-    
-    if(isCuponAvaliable){
+    let isCouponAvaliable = couponCodes.includes(couponCodeUser);
+
+    if(isCouponAvaliable){
         let sales = (price/100) * 25;
         price = price - sales;
-        couponCodes = removeElementFromArray(couponCodes, cuponCodeUser);
+        couponCodes = removeElementFromArray(couponCodes, couponCodeUser);
         console.log(couponCodes);
-        document.getElementById("result-applied-cupon").innerHTML = "Il cupon è stato corettamente applicato!";
-    } else if (cuponCodeUser != ""){
-        document.getElementById("result-applied-cupon").innerHTML = "Il cupon non è valido!";
+        document.getElementById("result-applied-coupon").innerHTML = "Il coupon è stato corettamente applicato!";
+    } else if (couponCodeUser != ""){
+        document.getElementById("result-applied-coupon").innerHTML = "Il coupon non è valido!";
+        document.getElementById("result-applied-coupon").classList.add("text-danger");
+        document.getElementById("coupon").classList.add("text-danger");
     } else {
-        document.getElementById("result-applied-cupon").innerHTML = "";
+        document.getElementById("result-applied-coupon").innerHTML = "";
     }
     
     console.log(price);
